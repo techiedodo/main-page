@@ -1,28 +1,87 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Luis Gaytan">
-  <meta name="description" content="Web Development Agency based in Los Angeles, CA. Website design, eCommerce websites, custom creations at and affordable price.">
-  <title>TechieDodo | Adaptable Web Development</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <body class="container-fluid">
-    <header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Luis Gaytan">
+    <meta name="description" content="Web Development Agency based in Los Angeles, CA. Website design, eCommerce websites, custom creations at and affordable price.">
+    <title>TechieDodo | Adaptable Web Development</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Montserrat+Subrayada" rel="stylesheet">
+  </head>
+  <body class="container-fluid zero">
+    <header class="hero-section">
       <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header"><a href="#" class="navbar-brand"><img alt="Techie Dodo Logo" src=""></a></div>
+        <div id="nav-section" class="container-fluid">
+          <div class="navbar-header"><a href="#" class="navbar-brand"><img alt="Techie Dodo Logo" src="./assets/images/dodo-logo.png" id="logo"></a><span>TechieDodo</span>
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          </div>
+          <div id="navbar-collapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
+      <row>
+        <div class="homepage-hero-module">
+          <div class="video-container">
+            <div class="filter"></div>
+            <video autoplay="" loop="" poster="./assets/video/Ideas.jpg" class="fillWidth">
+              <source src="./assets/video/Ideas.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+              <source src="./assets/video/Ideas.webm" type="video/webm">Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden"><img src="./assets/video/Mock-up.jpg" alt=""></div>
+          </div>
+          <div class="hero-text row zero">
+            <div class="col-sm-7">
+              <h1>
+                 
+                We Create and Build Digital Products Your Customers Will Enjoy Using.
+                <hr><small>Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.</small>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </row>
     </header>
     <div class="main">
-      <h3>This is the main div</h3>
+      <h3 class="zero">This is the main div</h3>
     </div>
-    <footer>
-      <h4>This is the footer  </h4>
+    <footer class="zero hidden">
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <h6>Menu</h6>
+          <ul> 
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h6>Social</h6>
+        </div>
+        <div class="col-sm-4">
+          <h6>Contact Us</h6>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6">TechieDodo</div>
+        <div class="col-sm-6 text-right">
+           
+          Copyright &mdash 2017 
+        </div>
+      </div>
     </footer>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./scripts/scripts.js"></script>
+</html>

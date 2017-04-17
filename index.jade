@@ -1,28 +1,79 @@
 //output:index.html
 doctype html
 html(lang="en")
-head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  meta(name='author' content='Luis Gaytan')
-  meta(name='description' content='Web Development Agency based in Los Angeles, CA. Website design, eCommerce websites, custom creations at and affordable price.')
-  
-  title TechieDodo | Adaptable Web Development
-  
-  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous')
-  
-  body.container-fluid
-    header
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='author' content='Luis Gaytan')
+    meta(name='description' content='Web Development Agency based in Los Angeles, CA. Website design, eCommerce websites, custom creations at and affordable price.')
+    
+    title TechieDodo | Adaptable Web Development
+    
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
+    link(rel='stylesheet' href='./styles/styles.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Montserrat+Subrayada' rel='stylesheet')
+    
+  body.container-fluid.zero
+    header.hero-section
       nav.navbar.navbar-default
-        .container-fluid
+        .container-fluid#nav-section
           .navbar-header
             a.navbar-brand(href='#')
-              img(alt='Techie Dodo Logo', src='')
+              img(alt='Techie Dodo Logo', src='./assets/images/dodo-logo.png' id='logo')
+            span TechieDodo
+            button(type='button', class='navbar-toggle collapsed', data-toggle='collapse', data-target='#navbar-collapse' aria-expanded='false')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          .collapse.navbar-collapse#navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='#') Home
+              li
+                a(href='#') About Us
+              li
+                a(href='#') Services
+              li
+                a(href='#') Contact Us
+      row
+        .homepage-hero-module
+          .video-container
+            .filter
+            video.fillWidth(autoplay='', loop='' poster='./assets/video/Ideas.jpg')
+              source(src='./assets/video/Ideas.mp4', type='video/mp4')
+              | Your browser does not support the video tag. I suggest you upgrade your browser.
+              source(src='./assets/video/Ideas.webm', type='video/webm')
+              | Your browser does not support the video tag. I suggest you upgrade your browser.
+            .poster.hidden
+              img(src='./assets/video/Mock-up.jpg', alt='')
+          .hero-text.row.zero
+            .col-sm-7
+              h1 
+                | We Create and Build Digital Products Your Customers Will Enjoy Using.
+                hr
+                small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
     .main
-      h3 This is the main div
-    footer
-      h4 This is the footer  
-
+      h3.zero This is the main div
+    footer.zero.hidden
+      .row.text-center
+        .col-sm-4
+          h6 Menu
+          ul 
+            li Home
+            li About Us
+            li Services
+            li Contact Us
+        .col-sm-4
+          h6 Social
+        .col-sm-4
+           h6 Contact Us
+      hr
+      .row
+        .col-sm-6
+          | TechieDodo
+        .col-sm-6.text-right 
+          | Copyright &mdash 2017 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
-  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+  script(src="./scripts/scripts.js")
