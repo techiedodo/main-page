@@ -1,0 +1,141 @@
+@import "variables"
+// === animation ===
+.hidden
+  display: none
+  transition: all .5s ease
+.shade
+  opacity: .5
+  transition: all ease
+.opacity
+  opacity: 0
+  transition: all 3s ease
+// === page ===
+body
+  font-family: $main-font
+.wrapper-main
+  max-width: $screen-size
+  margin-left: auto
+  margin-right: auto
+.row
+  margin: 0 auto
+  padding: 0
+.zero
+  padding: 0 0
+  margin: 0 0
+
+.hero-section
+  font-family: $headline-font-primary
+  width: 100vw
+  height: 90vh
+  overflow: hidden
+  nav
+    border: 0
+    border-bottom: 1px solid white
+    border-radius: 0
+    margin: 0
+    height: 7em
+    background-color: rgba(115, 115, 115, 0.16)
+    .navbar-right a
+      &:hover, &:focus
+        color: white !important
+        transform: scale(1.2)
+        transition: all .25s ease
+      transition: all .05s ease
+    #nav-section
+      margin-top: 1.5em
+      span
+        color: $primary-color
+        text-shadow: -3px 2px 5px black
+      #logo
+        position: relative
+        top: -1.5em
+      span
+        font-family: $headline-font-secondary
+        font-size: 3em
+  .homepage-hero-module
+    position: relative
+    .video-container
+      position: relative
+      padding: 0
+      overflow: hidden
+      video
+        position: fixed
+        top: 50%
+        left: 54%
+        transform: translate(-50%, -50%)
+        min-width: 100%
+        min-height: 100%
+        width: auto
+        height: auto
+        opacity: .95
+        z-index: -1
+        background: transparent
+    .hero-text
+      position: relative
+      top: 25vh
+      padding-left: 1em
+      h1
+        color: white
+        text-shadow: -2px 2px 2px black
+      small
+        color: #a5a5a5
+
+.main
+  background-color: $background-main
+  height: 100%
+  position: relative
+  z-index: 2
+  border-bottom: 2px solid $tertiary-color
+  @include top-bottom-padding
+  img
+    margin: 0 auto
+    padding: 3.75em 1em 1.5em 1em
+  hr
+    max-width: 8em
+    border-bottom: 1.5px solid $primary-color
+    margin-top: 10px
+  h2
+    font-family: $headline-font-secondary
+    text-shadow: -1px 1px 3px $primary-color
+  h3
+    font-family: $headline-font-primary
+    color: $tertiary-color
+    font-weight: bold
+    font-size: $h3-bigger-text
+  ul
+    list-style: none
+    color: $tertiary-color
+    @include body-font-styles
+.secondary
+  color: ghostwhite
+  margin-bottom: 185px
+  height: 100%
+  position: relative
+  z-index: 2
+  .secondary-left
+    background-color: $left-background
+    h4
+      font-family: $headline-font-primary
+    @include small-padding
+    @include grow
+    &:hover
+      img
+        transform: scale(1.2)
+        transition: transform .8s ease-out
+      background-color: #C5D3F4
+  .secondary-right
+    background-color: $right-background
+    @include small-padding
+    @include grow
+    &:hover
+      img
+        transform: scale(1.2)
+        transition: transform .8s ease-out
+      background-color: #FFD277
+footer
+  position: fixed
+  width: 100%
+  bottom: 0
+  background-color: black
+  z-index: 0
+  padding-top: 1em

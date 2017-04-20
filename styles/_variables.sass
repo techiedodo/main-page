@@ -1,0 +1,42 @@
+/* main: main.sass*/
+
+@mixin top-bottom-padding
+  padding-top: $padding-top
+  padding-bottom: $padding-bottom
+
+@mixin small-padding
+  padding-top: 3.5em
+  padding-bottom: 3em
+
+@mixin body-font-styles
+  font-family: $main-font
+  line-height: 1.75em
+  font-size: $body-bigger-text
+
+// === color ===
+$primary-color: #FFA900
+$secondary-color: #76C947
+$tertiary-color: #444499
+$background-main: #f9f9ff
+$left-background: #5ABBC0
+$right-background: #FA824B
+
+// === fonts ===
+$headline-font-primary: 'Alegreya Sans SC', sans-serif
+$headline-font-secondary: 'Montserrat Subrayada', sans-serif
+$main-font: 'Josefin Slab', serif
+
+// === sizes ===
+$screen-size: 1180px
+$center-content: 0 auto
+$padding-top: 5.5em
+$padding-bottom: 4.5em
+$h3-bigger-text: 2em
+$body-bigger-text: 1.15em
+
+// === transform ===
+@mixin grow
+  transition: all .8s ease-out
+  img
+    transform: scale(1)
+    transition: all .8s ease-out

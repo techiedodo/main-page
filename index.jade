@@ -11,13 +11,13 @@ html(lang="en")
     title TechieDodo | Adaptable Web Development
     
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
-    link(rel='stylesheet' href='./styles/styles.min.css')
-    link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Montserrat+Subrayada' rel='stylesheet')
+    link(rel='stylesheet' href='./styles/main.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Josefin+Slab:300|Montserrat+Subrayada' rel='stylesheet')
     
   body.container-fluid.zero
     header.hero-section
       nav.navbar.navbar-default
-        .container-fluid#nav-section
+        .container-fluid#nav-section.wrapper-main
           .navbar-header
             a.navbar-brand(href='#')
               img(alt='Techie Dodo Logo', src='./assets/images/dodo-logo.png' id='logo')
@@ -47,33 +47,68 @@ html(lang="en")
               | Your browser does not support the video tag. I suggest you upgrade your browser.
             .poster.hidden
               img(src='./assets/video/Mock-up.jpg', alt='')
-          .hero-text.row.zero
+          .hero-text.row.wrapper-main
             .col-sm-7
               h1 
-                | We Create and Build Digital Products Your Customers Will Enjoy Using.
+                | We Create and Build Digital Products Your Customers & You Will Enjoy Using.
                 hr
                 small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
     .main
-      h3.zero This is the main div
-    footer.zero.hidden
-      .row.text-center
-        .col-sm-4
-          h6 Menu
-          ul 
-            li Home
-            li About Us
-            li Services
-            li Contact Us
-        .col-sm-4
-          h6 Social
-        .col-sm-4
-           h6 Contact Us
-      hr
-      .row
-        .col-sm-6
-          | TechieDodo
-        .col-sm-6.text-right 
-          | Copyright &mdash 2017 
+      .wrapper-main
+        .row
+          .col-sm-offset-2.col-sm-8.text-center
+            h2 Custom website design is just the beginning...
+        .row
+          .col-sm-6.text-center
+            img(alt='MacBook Showing Website', src='./assets/images/macbook.png' class='img-responsive opacity' id='left-img')
+            h3 Digital
+            hr
+            ul.zero
+              li Website Design
+              li eCommerce Web Design
+              li WordPress Web Design
+          .col-sm-6.text-center
+            img(alt='MacBook Showing Website', src='./assets/images/technical.png' class='img-responsive opacity' id='right-img')
+            h3 Technical
+            hr
+            ul.zero
+              li Web Maintenance & Hosting
+              li Application Development
+              li Search Engine Optimization
+    .secondary
+      .row.container-fluid
+        .col-sm-6.secondary-left.row
+          .col-xs-6
+            img(alt='MacBook Showing Website', src='./assets/images/Responsive-Web.png' class='img-responsive')
+          .col-xs-6.text-justify
+            h4 Responsive Website Design
+            p Need to blow away competition or require a stunning website to inform people about what you do? We provide custom website designs crafted for your audience and built around your needs.
+        .col-sm-6.secondary-right.row
+          .col-xs-6
+            img(alt='MacBook Showing Website', src='./assets/images/Marketing.png' class='img-responsive')
+          .col-xs-6.text-justify
+            h4 Marketing Revamped
+            p At TechieDodo, we can research your existing customer base or investigate new markets. Don't rest on your laurels; there are legions of potential clients just waiting to hear all about you.
+    footer.hidden
+      .wrapper-main
+        .row.text-center
+          .col-sm-4
+            h6 Menu
+            ul 
+              li Home
+              li About Us
+              li Services
+              li Contact Us
+          .col-sm-4
+            h6 Social
+          .col-sm-4
+             h6 Contact Us
+        hr
+        .row
+          .col-sm-6
+            | TechieDodo
+          .col-sm-6.text-right 
+            | Copyright &mdash 2017 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
   script(src="./scripts/scripts.js")
