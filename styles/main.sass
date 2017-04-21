@@ -108,12 +108,13 @@ body
     @include body-font-styles
 .secondary
   color: ghostwhite
-  margin-bottom: 185px
-  height: 100%
   position: relative
   z-index: 2
+  border-bottom: 2px solid $secondary-color
   .secondary-left
     background-color: $left-background
+    .col-xs-6
+      padding-right: 1.75em
     h4
       font-family: $headline-font-primary
     @include small-padding
@@ -125,6 +126,10 @@ body
       background-color: #C5D3F4
   .secondary-right
     background-color: $right-background
+    .col-xs-6
+      padding-left: 1.75em
+    h4
+      font-family: $headline-font-primary
     @include small-padding
     @include grow
     &:hover
@@ -132,6 +137,20 @@ body
         transform: scale(1.2)
         transition: transform .8s ease-out
       background-color: #FFD277
+.about-us
+  @include top-bottom-padding
+  background-color: $background-main
+  margin-bottom: 185px
+  height: 100%
+  position: relative
+  z-index: 2
+  img
+    margin: 0 auto
+  h3
+    font-family: $headline-font-primary
+    font-size: $h3-bigger-text
+  p
+    font-size: $body-bigger-text
 footer
   position: fixed
   width: 100%
