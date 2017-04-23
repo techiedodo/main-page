@@ -12,7 +12,7 @@
   transition: all 3s ease
 // === page ===
 body
-  font-family: $main-font
+  font-family: $body-font
 .wrapper-main
   max-width: $screen-size
   margin-left: auto
@@ -26,15 +26,15 @@ body
 .glyphicon
   padding-left: 5px
 .btn-primary
-  font-family: $headline-font-primary
+  font-family: $header-primary-font
   margin: 1em
   padding: .85em
   font-size: 1.15em
 .cta
-  margin-top: 2.5em
+  margin-top: 3.5em
 
 .hero-section
-  font-family: $headline-font-primary
+  font-family: $header-primary-font
   width: 100vw
   height: 90vh
   overflow: hidden
@@ -60,7 +60,7 @@ body
         position: relative
         top: -1.5em
       span
-        font-family: $headline-font-secondary
+        font-family: $header-main-font
         font-size: 3em
   .homepage-hero-module
     position: relative
@@ -82,7 +82,7 @@ body
         background: transparent
     .hero-text
       position: relative
-      top: 25vh
+      top: 17vh
       padding-left: 1em
       h1
         color: white
@@ -104,13 +104,12 @@ body
     border-bottom: 1.5px solid $primary-color
     margin-top: 10px
   h2
-    font-family: $headline-font-secondary
+    font-family: $header-main-font
     text-shadow: -1px 1px 3px $primary-color
   h3
-    font-family: $headline-font-primary
+    font-family: $header-secondary-alt-font
     color: $tertiary-color
     font-weight: bold
-    // font-size: $h3-bigger-text
   ul
     list-style: none
     color: $tertiary-color
@@ -125,7 +124,7 @@ body
     .col-xs-6
       padding-right: 1.75em
     h4
-      font-family: $headline-font-primary
+      font-family: $header-primary-font
     @include small-padding
     @include grow
     &:hover
@@ -138,7 +137,7 @@ body
     .col-xs-6
       padding-left: 1.75em
     h4
-      font-family: $headline-font-primary
+      font-family: $header-primary-font
     @include small-padding
     @include grow
     &:hover
@@ -154,8 +153,7 @@ body
   img
     margin: 0 auto
   h3
-    font-family: $headline-font-primary
-    // font-size: $h3-bigger-text
+    font-family: $header-secondary-alt-font
   p
     font-size: $body-bigger-text
 .projects

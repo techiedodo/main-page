@@ -42,11 +42,11 @@ $(document).ready(function(){
         }, 250*(i+1));
       });
     }
-    if (wScroll > 650) {
+    if (wScroll > $('.cta').offset().top) {
       console.log('vitory');
       setTimeout(function(){
         $('.about-us > .row > .col-sm-7').css('opacity', '1');
-      }, 700);
+      }, 300);
     }
   });
 });
