@@ -1,4 +1,5 @@
 @import "variables"
+@import "fonts"
 // === animation ===
 .hidden
   display: none
@@ -22,6 +23,15 @@ body
 .zero
   padding: 0 0
   margin: 0 0
+.glyphicon
+  padding-left: 5px
+.btn-primary
+  font-family: $headline-font-primary
+  margin: 1em
+  padding: .85em
+  font-size: 1.15em
+.cta
+  margin-top: 2.5em
 
 .hero-section
   font-family: $headline-font-primary
@@ -82,7 +92,6 @@ body
 
 .main
   background-color: $background-main
-  height: 100%
   position: relative
   z-index: 2
   border-bottom: 2px solid $tertiary-color
@@ -101,7 +110,7 @@ body
     font-family: $headline-font-primary
     color: $tertiary-color
     font-weight: bold
-    font-size: $h3-bigger-text
+    // font-size: $h3-bigger-text
   ul
     list-style: none
     color: $tertiary-color
@@ -140,17 +149,19 @@ body
 .about-us
   @include top-bottom-padding
   background-color: $background-main
-  margin-bottom: 185px
-  height: 100%
   position: relative
   z-index: 2
   img
     margin: 0 auto
   h3
     font-family: $headline-font-primary
-    font-size: $h3-bigger-text
+    // font-size: $h3-bigger-text
   p
     font-size: $body-bigger-text
+.projects
+  margin-bottom: 185px
+  position: relative
+  z-index: 2
 footer
   position: fixed
   width: 100%
