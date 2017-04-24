@@ -104,7 +104,7 @@ html(lang="en")
     .about-us
       .row.container-fluid.wrapper-main.text-justify
         .col-sm-5
-          img(alt='California Bear', src='./assets/images/cali-bear.png' class='img-responsive')
+          img(alt='California Bear', src='./assets/images/cali-bear.png' class='img-responsive' id='cali-bear')
         .col-sm-7.opacity
           h3 TechieDodo &mdash; ABOUT US
             br
@@ -117,8 +117,26 @@ html(lang="en")
           a(href='#') Read More...
             span.glyphicon.glyphicon-download
     .projects
-      .wrapper-main.row
-        h3 Recent Projects
+      .wrapper-main.container-fluid
+        h3 Recent Projects &mdash;
+          br
+          small
+            span Take a look at some of our work, and see how it's postively impacted our clients
+        .row#samples
+          .col-sm-4
+            a(href='#')
+              img(src='http://placehold.it/250x250' class='img-responsive opacity')
+          .col-sm-4
+            a(href='#')
+              img(src='http://placehold.it/250x250' class='img-responsive opacity')
+          .col-sm-4
+            a(href='#')
+              img(src='http://placehold.it/250x250' class='img-responsive opacity')
+              
+        h4.text-center 
+          | We will work with you to make sure you understand what you are getting. 
+          br
+          | We work with you JARGON-Free.
     footer.hidden
       .wrapper-main
         .row.text-center

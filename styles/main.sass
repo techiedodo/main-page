@@ -152,14 +152,28 @@ body
   z-index: 2
   img
     margin: 0 auto
-  h3
-    font-family: $header-secondary-alt-font
-  p
-    font-size: $body-bigger-text
+  @include standard-text
 .projects
+  @include top-bottom-padding
+  @include standard-text
+  span
+    color: $primary-color
   margin-bottom: 185px
   position: relative
   z-index: 2
+  color: white
+  background:
+    image: linear-gradient(to top right, rgba(0, 25, 128, 0.5), rgba(128, 25, 0, 0.75)), linear-gradient(rgba(0, 0, 255, 0.25) 100%, transparent), url('../assets/images/product.jpg')
+    position: center
+    attachment: fixed
+    repeat: no-repeat
+    size: cover
+  #samples
+    @include small-padding
+    img
+      margin: 0 auto
+  h4
+    font-family: $header-secondary-font
 footer
   position: fixed
   width: 100%
