@@ -25,7 +25,7 @@ $(document).ready(function(){
 
       $('.hero-text').removeClass('shade');
     }
-    if (wScroll > 225) {
+    if (wScroll > $('.main').offset().top) {
       $('footer').removeClass('hidden');
       $('.text-center > img').each(function(i){
         setTimeout(function(){
