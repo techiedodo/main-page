@@ -3,6 +3,10 @@
   @media only screen and (max-width: 767px)
     @content
 
+@mixin small-screens()
+  @media only screen and (max-width: 376px)
+    @content
+
 @mixin top-bottom-padding
   padding-top: $padding-top
   padding-bottom: $padding-bottom

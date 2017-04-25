@@ -37,6 +37,7 @@ body
   font-family: $header-primary-font
   width: 100vw
   height: 90vh
+  min-height: 48.5em
   overflow: hidden
   nav
     border: 0
@@ -54,12 +55,17 @@ body
     #nav-section
       margin-top: 1.5em
       transition: all .35s ease
-      @include medium-screens
-        .navbar-header span
-          font-size: 2.5em
+      @include small-screens
         img
-          transform: scale(.9)
-          transition: all .35s ease
+          display: none
+        transition: all .15s ease
+      @include medium-screens
+        .navbar-header
+          span
+            font-size: 2.5em
+          img
+            transform: scale(.9)
+            transition: all .35s ease
         .navbar-nav
           margin-top: 0
           position: relative
@@ -85,7 +91,7 @@ body
       video
         position: fixed
         top: 50%
-        left: 54%
+        left: 50%
         transform: translate(-50%, -50%)
         min-width: 100%
         min-height: 100%
@@ -98,7 +104,7 @@ body
       transition: all .15s ease
       @include medium-screens
         font-size: 85%
-        top: 20vh
+        top: 10vh
         transition: all .15s ease
       position: relative
       top: 17vh
@@ -173,6 +179,9 @@ body
         transform: scale(1.2)
         transition: transform .8s ease-out
       background-color: #FFD277
+  @include medium-screens
+    img
+      margin: 0 auto
 .about-us
   @include top-bottom-padding
   background-color: $background-main
@@ -202,6 +211,8 @@ body
     attachment: fixed
     repeat: no-repeat
     size: cover
+  @include medium-screens
+    background-image: linear-gradient(to top right, rgba(0, 25, 128, 0.5), rgba(128, 25, 0, 0.75)), linear-gradient(rgba(0, 0, 255, 0.25) 100%, transparent), url('../assets/images/product-medium.jpg')
   #samples
     @include small-padding
     img
