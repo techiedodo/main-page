@@ -132,6 +132,37 @@
         </h4>
       </div>
     </div>
+    <div class="contact">
+      <div class="wrapper-main container-fluid">
+        <h3>We'll Put You on Equal Footing &mdash;<br><small>Your Small Business Will have the Big Business Presence on the Web</small></h3>
+        <div class="row">
+          <div class="col-sm-7">
+            <p>We specilalize in...</p>
+          </div>
+          <div class="col-sm-5">
+            <form method="post" action="email.php" role="form">
+              <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" placeholder="Please enter Email" required class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Please enter Name" required class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Please enter Message" rows="5" required class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="secCheck"><?php echo $_SESSION["a"].'+'.$_SESSION["b"];?></label>
+                <input type="text" id="secCheck" name="secCheck" placeholder="Please Solve" class="form-control">
+              </div>
+              <button type="submit" name="submit" id="submit" class="btn btn-success btn-sm">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="hidden">
       <div class="wrapper-main">
         <div class="row text-center">
