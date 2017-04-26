@@ -25,6 +25,9 @@
     font-family: $header-secondary-alt-font
   p
     font-size: $body-bigger-text
+@mixin side-border ($px, $type, $color)
+  border-left: $px $type $color
+  padding-left: .5em
 
 
 // === color ===
@@ -38,8 +41,8 @@ $right-background: #FA824B
 // === sizes ===
 $screen-size: 1180px
 $center-content: 0 auto
-$padding-top: 5.5em
-$padding-bottom: 4.5em
+$padding-top: 5em
+$padding-bottom: 4em
 $h3-bigger-text: 2em
 $body-bigger-text: 1.15em
 

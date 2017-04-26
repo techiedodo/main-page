@@ -58,6 +58,10 @@ body
       @include small-screens
         img
           display: none
+        button
+          padding: 5px 5px
+          margin-top: 11px
+          margin-right: 5px
         transition: all .15s ease
       @include medium-screens
         .navbar-header
@@ -157,6 +161,7 @@ body
     background-color: $left-background
     .col-xs-6
       padding-right: 1.75em
+    overflow: hidden
     h4
       font-family: $header-primary-font
     @include small-padding
@@ -170,6 +175,7 @@ body
     background-color: $right-background
     .col-xs-6
       padding-left: 1.75em
+    overflow: hidden
     h4
       font-family: $header-primary-font
     @include small-padding
@@ -188,6 +194,9 @@ body
   position: relative
   z-index: 2
   transition: all .35s ease
+  border-bottom: 2px solid $secondary-color
+  h3
+    @include side-border(7px, solid, $secondary-color)
   @include medium-screens
     font-size: 85%
     img
@@ -201,10 +210,12 @@ body
   @include standard-text
   span
     color: $primary-color
-  margin-bottom: 185px
   position: relative
   z-index: 2
   color: white
+  border-bottom: 2px solid $tertiary-color
+  h3
+    @include side-border(7px, solid, darkorange)
   background:
     image: linear-gradient(to top right, rgba(0, 25, 128, 0.5), rgba(128, 25, 0, 0.75)), linear-gradient(rgba(0, 0, 255, 0.25) 100%, transparent), url('../assets/images/product.jpg')
     position: center
@@ -219,6 +230,20 @@ body
       margin: 0 auto
   h4
     font-family: $header-secondary-font
+.contact
+  @include top-bottom-padding
+  @include standard-text
+  margin-bottom: 185px
+  position: relative
+  z-index: 2
+  color: black
+  background-color: ghostwhite
+  h3
+    @include side-border(7px, solid, $secondary-color)
+  .row
+    @include small-padding
+    img
+      margin: 0 auto
 footer
   position: fixed
   width: 100%

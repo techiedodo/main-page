@@ -137,6 +137,29 @@ html(lang="en")
           | We work to ensure you understand all aspects of your investment. 
           br
           | TechieDodo is a JARGON-Free environment.
+    .contact
+      .wrapper-main.container-fluid
+        h3 We'll Put You on Equal Footing &mdash;
+          br
+          small Your Small Business Will have the Big Business Presence on the Web
+        .row
+          .col-sm-7
+            p We specilalize in...
+          .col-sm-5
+            form(method='post' action='email.php' role='form')
+              .form-group
+                label(for='email') E-Mail
+                input(type='email' class='form-control' id='email' placeholder='Please enter Email' required)
+              .form-group
+                label(for='name') Name
+                input(type='text' class='form-control' id='name' placeholder='Please enter Name' required)
+              .form-group
+                label(for='message') Message
+                textarea(class='form-control' id='message' placeholder='Please enter Message' rows='5' required)
+              .form-group
+                label(for='secCheck') <?php echo $_SESSION["a"].'+'.$_SESSION["b"];?>
+                input(type='text' id='secCheck' name='secCheck' class='form-control' placeholder='Please Solve')
+              button(type='submit' class='btn btn-success btn-sm' name='submit' id='submit') Send Message
     footer.hidden
       .wrapper-main
         .row.text-center

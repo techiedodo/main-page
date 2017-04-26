@@ -19,13 +19,11 @@ $(document).ready(function(){
             'transform': 'translateX(' + wScroll / 3 + '%)'
         });
     if (wScroll > 150){
-
       $('.hero-text').addClass('shade');
     } else {
-
       $('.hero-text').removeClass('shade');
     }
-    if (wScroll > $('.main').offset().top) {
+    if (wScroll > $('.hero-text').offset().top) {
       $('footer').removeClass('hidden');
       $('.text-center > img').each(function(i){
         setTimeout(function(){
@@ -40,7 +38,7 @@ $(document).ready(function(){
         $('.about-us > .row > .col-sm-7').css('opacity', '1');
       }, 300);
     }
-    if (wScroll > $('#cali-bear').offset().top) {
+    if (wScroll > $('.about-us').offset().top) {
       $('#samples > .col-sm-4 > a > img').each(function(i){
         setTimeout(function(){
           $('#samples > .col-sm-4 > a > img').eq(i).css('opacity', '1');
