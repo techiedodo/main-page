@@ -13,6 +13,7 @@ html(lang="en")
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
     link(rel='stylesheet' href='./styles/main.min.css')
     link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Josefin+Slab:300|Montserrat+Subrayada|Abril+Fatface|Anton' rel='stylesheet')
+    script(src='https://www.google.com/recaptcha/api.js')
     
   body.container-fluid.zero
     header.hero-section
@@ -31,9 +32,9 @@ html(lang="en")
               li
                 a(href='#') Home
               li
-                a(href='#') About Us
-              li
                 a(href='#') Services
+              li
+                a(href='#') About Us
               li
                 a(href='#') Contact Us
       row
@@ -48,11 +49,15 @@ html(lang="en")
             .poster.hidden
               img(src='./assets/video/Mock-up.jpg', alt='')
           .hero-text.row.wrapper-main
-            .col-sm-8
-              h1 
-                | We Focus on Working with Small Businesses to Create & Build Digital Products.
-                hr
-                small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
+            h1 
+              | We Focus on Working with Small Businesses to Create & Build Digital Products.
+              hr
+              small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
+            //- .col-xs-12.col-sm-8
+            //-   h1 
+            //-     | We Focus on Working with Small Businesses to Create & Build Digital Products.
+            //-     hr
+            //-     small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
     .main
       .wrapper-main
         .row
@@ -157,8 +162,7 @@ html(lang="en")
                 label(for='message') Message
                 textarea(class='form-control' id='message' placeholder='Please enter Message' rows='5' required)
               .form-group
-                label(for='secCheck') <?php echo $_SESSION["a"].'+'.$_SESSION["b"];?>
-                input(type='text' id='secCheck' name='secCheck' class='form-control' placeholder='Please Solve')
+                .g-recaptcha(data-sitekey='6LcU4R4UAAAAAM_ZX-YrD1fjKo-V9zpVIwhkvUQB')
               button(type='submit' class='btn btn-success btn-sm' name='submit' id='submit') Send Message
     footer.hidden
       .wrapper-main

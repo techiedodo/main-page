@@ -23,7 +23,7 @@ $(document).ready(function(){
     } else {
       $('.hero-text').removeClass('shade');
     }
-    if (wScroll > $('.hero-text').offset().top) {
+    if (wScroll > $('.hero-text').offset().top+450) {
       $('footer').removeClass('hidden');
       $('.text-center > img').each(function(i){
         setTimeout(function(){
