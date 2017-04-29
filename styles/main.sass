@@ -228,6 +228,11 @@ body
     @include small-padding
     img
       margin: 0 auto
+      border: 2px solid white
+      transition: all .5s ease
+      &:hover
+        transform: translate(5px, 5px)
+        transition: all .5s ease
   h4
     font-family: $header-secondary-font
 .contact
@@ -242,12 +247,44 @@ body
     @include side-border(7px, solid, $secondary-color)
   .row
     @include small-padding
-    img
-      margin: 0 auto
+  h4
+    font-family: $header-primary-font
+    padding: 1em
+    background-color: rgba(210, 210, 216, 0.59)
+    border: solid 1px $primary-color
+    color: white
+  p
+    font-size: 1.25em
+  img
+    transform: scaleX(-1)
+    filter: FlipH
+    position: relative
+    left: 90%
 footer
   position: fixed
   width: 100%
   bottom: 0
   background-color: black
   z-index: 0
-  padding-top: 1em
+  padding-top: .85em
+  .wrapper-main
+    padding-top: 1.5em
+    padding-bottom: 1.5em
+    hr
+      margin: 0
+    #first
+      color: $primary-color
+      font-family: $header-main-font
+    #second
+      color: $secondary-color
+      font-family: $header-main-font
+    .col-xs-6
+      font-family: $header-secondary-alt-font
+    h5
+      color: $primary-color
+      padding: .5em
+      font-family: $header-secondary-alt-font
+    ul
+      font-family: $header-primary-font
+      list-style: none
+      padding-left: 10px
