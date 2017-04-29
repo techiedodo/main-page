@@ -2,9 +2,11 @@ $(document).ready(function(){
   function checkSize(){
     var bigger = $('#bigger').height();
     var smaller = $('#smaller').height();
+
     if (smaller != bigger){
     $('#smaller').css('min-height', bigger);
     };
+
     console.log('left and right equal size!');
   };
   checkSize();
@@ -45,5 +47,10 @@ $(document).ready(function(){
         }, 350*(i+2));
       });
     }
+    if (wScroll > $('.contact').offset().top) {
+      $('#logo-bottom').css('opacity', '1');
+    }
+    var footerSize = $('footer').height();
+    $('.contact').css('margin-bottom', footerSize-10);
   });
 });

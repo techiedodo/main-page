@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="./styles/main.min.css">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Josefin+Slab:300|Montserrat+Subrayada|Abril+Fatface|Anton" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-83406711-1', 'auto');
+      ga('send', 'pageview');
+      
+    </script>
   </head>
   <body class="container-fluid zero">
     <header class="hero-section">
@@ -121,9 +130,9 @@
       <div class="wrapper-main container-fluid">
         <h3>Recent Projects &mdash;<br><small><span>Take a look at some of our work, and see how it's postively impacted our clients</span></small></h3>
         <div id="samples" class="row">
-          <div class="col-sm-4"><a href="#"><img src="http://placehold.it/250x250" class="img-responsive opacity"></a></div>
-          <div class="col-sm-4"><a href="#"><img src="http://placehold.it/250x250" class="img-responsive opacity"></a></div>
-          <div class="col-sm-4"><a href="#"><img src="http://placehold.it/250x250" class="img-responsive opacity"></a></div>
+          <div class="col-sm-4"><a href="http://chatsworthdental.com" target="_blank"><img src="./assets/images/ChatsworthDental.jpg" class="img-responsive opacity"></a></div>
+          <div class="col-sm-4"><a href="http://AmericanCrewTransportation.com" target="_blank"><img src="./assets/images/AmericanCrewTransportation.jpg" class="img-responsive opacity"></a></div>
+          <div class="col-sm-4"><a href="http://luisgaytan.com" target="_blank"><img src="./assets/images/WordPress-Website.jpg" class="img-responsive opacity"></a></div>
         </div>
         <h4 class="text-center">
            
@@ -133,12 +142,14 @@
     </div>
     <div class="contact">
       <div class="wrapper-main container-fluid">
-        <h3>We'll Put You on Equal Footing &mdash;<br><small>Your Small Business Will have the Big Business Presence on the Web</small></h3>
         <div class="row">
-          <div class="col-sm-7">
-            <p>We specilalize in...</p>
-          </div>
           <div class="col-sm-5">
+            <h3>We'll Put You on Equal Footing &mdash;<br><small>Your Small Business Will have the Big Business Presence on the Web</small></h3>
+            <p class="text-justify">At TechieDodo we offer custom services at an affordable price. With all the challenges of running your own business, having to build a competitive online prescence should not be one of them. </p>
+            <p class="text-justify">Other services offer one-size fits all solution, but only we can ensure that your website is tailored to match your business needs. Templates will work well for some, but if you want to help create your unique brand let TechieDodo help you achieve this goal.</p><img alt="Techie Dodo Logo" src="./assets/images/dodo-logo.png" id="logo-bottom" class="opacity">
+          </div>
+          <div class="col-sm-offset-1 col-sm-6">
+            <h4 class="text-center">Adapt & Fly. Let's Work Together</h4>
             <form method="post" action="email.php" role="form">
               <div class="form-group">
                 <label for="email">E-Mail</label>
@@ -163,29 +174,34 @@
     </div>
     <footer class="hidden">
       <div class="wrapper-main">
-        <div class="row text-center">
-          <div class="col-sm-4">
-            <h6>Menu</h6>
-            <ul> 
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Contact Us</li>
-            </ul>
+        <div class="row">
+          <div class="col-xs-6">
+            <h5>Menu
+              <ul> 
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </h5>
           </div>
-          <div class="col-sm-4">
-            <h6>Social</h6>
-          </div>
-          <div class="col-sm-4">
-            <h6>Contact Us</h6>
+          <div class="col-xs-6">
+            <h5>Social
+              <ul> 
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </h5>
           </div>
         </div>
         <hr>
         <div class="row">
-          <div class="col-sm-6">TechieDodo</div>
-          <div class="col-sm-6 text-right">
-             
-            Copyright &mdash 2017 
+          <div class="col-sm-6">
+            <h5><span id="first">Techie</span><span id="second">Dodo</span></h5>
+          </div>
+          <div class="col-sm-6 text-right"> 
+            <h5>Adapt & Fly Copyright &mdash; 2017 </h5>
           </div>
         </div>
       </div>

@@ -14,6 +14,13 @@ html(lang="en")
     link(rel='stylesheet' href='./styles/main.min.css')
     link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Josefin+Slab:300|Montserrat+Subrayada|Abril+Fatface|Anton' rel='stylesheet')
     script(src='https://www.google.com/recaptcha/api.js')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-83406711-1', 'auto');
+      ga('send', 'pageview');
     
   body.container-fluid.zero
     header.hero-section
@@ -129,14 +136,14 @@ html(lang="en")
             span Take a look at some of our work, and see how it's postively impacted our clients
         .row#samples
           .col-sm-4
-            a(href='#')
-              img(src='http://placehold.it/250x250' class='img-responsive opacity')
+            a(href='http://chatsworthdental.com' target='_blank')
+              img(src='./assets/images/ChatsworthDental.jpg' class='img-responsive opacity')
           .col-sm-4
-            a(href='#')
-              img(src='http://placehold.it/250x250' class='img-responsive opacity')
+            a(href='http://AmericanCrewTransportation.com' target='_blank')
+              img(src='./assets/images/AmericanCrewTransportation.jpg' class='img-responsive opacity')
           .col-sm-4
-            a(href='#')
-              img(src='http://placehold.it/250x250' class='img-responsive opacity')
+            a(href='http://luisgaytan.com' target='_blank')
+              img(src='./assets/images/WordPress-Website.jpg' class='img-responsive opacity')
               
         h4.text-center 
           | We work to ensure you understand all aspects of your investment. 
@@ -144,13 +151,17 @@ html(lang="en")
           | TechieDodo is a JARGON-Free environment.
     .contact
       .wrapper-main.container-fluid
-        h3 We'll Put You on Equal Footing &mdash;
-          br
-          small Your Small Business Will have the Big Business Presence on the Web
+        
         .row
-          .col-sm-7
-            p We specilalize in...
           .col-sm-5
+            h3 We'll Put You on Equal Footing &mdash;
+              br
+              small Your Small Business Will have the Big Business Presence on the Web
+            p.text-justify At TechieDodo we offer custom services at an affordable price. With all the challenges of running your own business, having to build a competitive online prescence should not be one of them. 
+            p.text-justify Other services offer one-size fits all solution, but only we can ensure that your website is tailored to match your business needs. Templates will work well for some, but if you want to help create your unique brand let TechieDodo help you achieve this goal.
+            img(alt='Techie Dodo Logo', src='./assets/images/dodo-logo.png' id='logo-bottom' class='opacity')
+          .col-sm-offset-1.col-sm-6
+            h4.text-center Adapt & Fly. Let's Work Together
             form(method='post' action='email.php' role='form')
               .form-group
                 label(for='email') E-Mail
@@ -166,24 +177,35 @@ html(lang="en")
               button(type='submit' class='btn btn-success btn-sm' name='submit' id='submit') Send Message
     footer.hidden
       .wrapper-main
-        .row.text-center
-          .col-sm-4
-            h6 Menu
-            ul 
-              li Home
-              li About Us
-              li Services
-              li Contact Us
-          .col-sm-4
-            h6 Social
-          .col-sm-4
-             h6 Contact Us
+        .row
+          .col-xs-6
+            h5 Menu
+              ul 
+                li
+                  a(href='#') Home
+                li
+                  a(href='#') Services
+                li
+                  a(href='#') About Us
+                li
+                  a(href='#') Contact Us
+          .col-xs-6
+            h5 Social
+              ul 
+                li
+                  a(href='#') Twitter
+                li
+                  a(href='#') GitHub
+                li
+                  a(href='#') LinkedIn
         hr
         .row
           .col-sm-6
-            | TechieDodo
+            h5
+              span#first Techie
+              span#second Dodo
           .col-sm-6.text-right 
-            | Copyright &mdash 2017 
+            h5 Adapt & Fly Copyright &mdash; 2017 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
   script(src="./scripts/scripts.js")
