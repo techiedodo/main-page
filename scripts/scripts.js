@@ -22,7 +22,7 @@ $(document).ready(function(){
       var $spy = $(this).scrollspy('refresh')
   });
 
-  $('.navbar a').on('click', function(event) {
+  $('li a').on('click', function(event) {
       if (this.hash !== "") {
           event.preventDefault();
           var hash = this.hash;
@@ -36,13 +36,15 @@ $(document).ready(function(){
   var $lastPosition = 0;
   $(window).scroll(function(){
     // disappearing nav
-    $position = $(window).scrollTop();
-    if ($position > $lastPosition) {
-      $("nav").fadeOut();
-    } else if ($lastPosition - $position > 5) {
-      $("nav").fadeIn();
+    if($(window).width() > 768) {
+      $position = $(window).scrollTop();
+      if ($position > $lastPosition) {
+        $("nav").fadeOut();
+      } else if ($lastPosition - $position > 5) {
+        $("nav").fadeIn();
+      }
+      $lastPosition = $position;
     }
-    $lastPosition = $position;
 
     // scrolling features
     var wScroll = $(this).scrollTop();
