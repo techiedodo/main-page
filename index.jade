@@ -22,9 +22,10 @@ html(lang="en")
       ga('create', 'UA-83406711-1', 'auto');
       ga('send', 'pageview');
     
-  body.container-fluid.zero
+  body(class='container-fluid zero')
     header.hero-section
-      nav.navbar.navbar-default
+      a(name='home' id='home')
+      nav.navbar.navbar-default.navbar-fixed-top
         .container-fluid#nav-section.wrapper-main
           .navbar-header
             a.navbar-brand(href='#')
@@ -36,14 +37,14 @@ html(lang="en")
               span.icon-bar
           .collapse.navbar-collapse#navbar-collapse
             ul.nav.navbar-nav.navbar-right
+              li.inactive
+                a(href='#home') Home
               li
-                a(href='#') Home
+                a(href='#services') Services
               li
-                a(href='#') Services
+                a(href='#about-us') About Us
               li
-                a(href='#') About Us
-              li
-                a(href='#') Contact Us
+                a(href='#contact') Contact Us
       row
         .homepage-hero-module
           .video-container
@@ -66,6 +67,7 @@ html(lang="en")
             //-     hr
             //-     small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
     .main
+      a(name='services' id='services') 
       .wrapper-main
         .row
           .col-sm-offset-2.col-sm-8.text-center
@@ -95,7 +97,7 @@ html(lang="en")
               br 
               | Let us turn it into a revenue-driving asset. 
             .btn.btn-primary Upgrade your site Today.
-    .secondary
+    .secondary 
       .row.container-fluid
         .col-sm-6.secondary-left.row
           .col-xs-12.col-sm-6
@@ -114,6 +116,7 @@ html(lang="en")
           .col-sm-6.text-justify
             img(alt='Marketing Lightbulb', src='./assets/images/Marketing.png' class='img-responsive')
     .about-us
+      a(name='about-us' id='about-us')
       .row.container-fluid.wrapper-main.text-justify
         .col-sm-5
           img(alt='California Bear', src='./assets/images/cali-bear.png' class='img-responsive' id='cali-bear')
@@ -150,6 +153,7 @@ html(lang="en")
           br
           | TechieDodo is a JARGON-Free environment.
     .contact
+      a(name='contact' id='contact')
       .wrapper-main.container-fluid
         
         .row
@@ -158,7 +162,7 @@ html(lang="en")
               br
               small Your Small Business Will have the Big Business Presence on the Web
             p.text-justify At TechieDodo we offer custom services at an affordable price. With all the challenges of running your own business, having to build a competitive online prescence should not be one of them. 
-            p.text-justify Other services offer one-size fits all solution, but only we can ensure that your website is tailored to match your business needs. Templates will work well for some, but if you want to help create your unique brand let TechieDodo help you achieve this goal.
+            p.text-justify Other services offer one-size fits all solution, but only we can ensure that your website is tailored to match your business needs. Templates will work well for some, but if you want help to create your unique brand, let TechieDodo help you achieve this goal.
             img(alt='Techie Dodo Logo', src='./assets/images/dodo-logo.png' id='logo-bottom' class='opacity')
           .col-sm-offset-1.col-sm-6
             h4.text-center Adapt & Fly. Let's Work Together

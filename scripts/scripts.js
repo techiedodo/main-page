@@ -1,21 +1,50 @@
 $(document).ready(function(){
+// Makes the height of the col equal to eachother
   function checkSize(){
     var bigger = $('#bigger').height();
     var smaller = $('#smaller').height();
-
     if (smaller != bigger){
     $('#smaller').css('min-height', bigger);
     };
-
     console.log('left and right equal size!');
   };
   checkSize();
-
   $(window).resize(function(){
     checkSize();
   });
 
+// scroll spy requires that the id on the section equal the href name
+  $('body').scrollspy({
+        target: '.navbar',
+        offset: 110
+    });
+  $('[data-spy="scroll"]').each(function() {
+      var $spy = $(this).scrollspy('refresh')
+  });
+
+  $('.navbar a').on('click', function(event) {
+      if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+              scrollTop: $(hash).offset().top + -100}, 500, function() {
+              window.location.hash = hash;
+          });
+      };
+  });
+
+  var $lastPosition = 0;
   $(window).scroll(function(){
+    // disappearing nav
+    $position = $(window).scrollTop();
+    if ($position > $lastPosition) {
+      $("nav").fadeOut();
+    } else if ($lastPosition - $position > 5) {
+      $("nav").fadeIn();
+    }
+    $lastPosition = $position;
+
+    // scrolling features
     var wScroll = $(this).scrollTop();
     $('.hero-text').css({
             'transform': 'translateX(' + wScroll / 3 + '%)'
