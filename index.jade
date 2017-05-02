@@ -166,19 +166,19 @@ html(lang="en")
               .messages
               .form-group
                 label(for='email') E-Mail
-                input(type='email' class='form-control' id='email' placeholder='Please enter Email' required data-error='Please enter email.')
+                input(type='email' class='form-control' id='email' placeholder='Please enter Email' required='require' data-error='Please enter email.')
                 .help-block.with-errors
               .form-group
                 label(for='name') Name
-                input(type='text' class='form-control' id='name' placeholder='Please enter Name' required data-error='Please enter name.')
+                input(type='text' class='form-control' id='name' placeholder='Please enter Name' required='require' data-error='Please enter name.')
                 .help-block.with-errors
               .form-group
                 label(for='message') Message
-                textarea(class='form-control' id='message' placeholder='Please enter Message' rows='5' required data-error='Please enter message.')
+                textarea(class='form-control' id='message' placeholder='Please enter Message' rows='5' required='require' data-error='Please enter message.')
                 .help-block.with-errors
               .form-group
                 .g-recaptcha(data-sitekey='6LcU4R4UAAAAAM_ZX-YrD1fjKo-V9zpVIwhkvUQB')
-              button(type='submit' class='btn btn-success btn-sm' name='submit' id='submit') Send Message
+              input(type='submit' name='submit' class='btn btn-success btn-sm'  id='submit' value='Send Message')
     footer.hidden
       .wrapper-main
         .row
@@ -232,5 +232,5 @@ html(lang="en")
             button(type='submit' class='btn btn-success btn-sm' name='submit' id='submit') Send Message
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
-  script(src="./scripts/scripts.js")
   script(src="./scripts/validator.js")
+  script(src="./scripts/scripts.js")
