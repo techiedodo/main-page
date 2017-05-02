@@ -40,12 +40,7 @@ body
   height: 90vh
   min-height: 47.5em
   overflow: hidden
-  background:
-    image: url('../assets/images/ideas-opt.gif')
-    position: center
-    attachment: fixed
-    repeat: no-repeat
-    size: cover
+
   nav
     border: 0
     border-bottom: 1px solid white
@@ -101,22 +96,37 @@ body
         top: -1.5em
   .homepage-hero-module
     position: relative
-    // .video-container
-    //   position: relative
-    //   padding: 0
-    //   overflow: hidden
-    //   video
-    //     position: fixed
-    //     top: 50%
-    //     left: 50%
-    //     transform: translate(-50%, -50%)
-    //     min-width: 100%
-    //     min-height: 100%
-    //     width: auto
-    //     height: auto
-    //     opacity: .95
-    //     z-index: -1
-    //     background: transparent
+    .video-container
+      position: relative
+      padding: 0
+      overflow: hidden
+      video
+        @include mobile-screens
+          display: none
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        min-width: 100%
+        min-height: 100%
+        width: auto
+        height: auto
+        opacity: .95
+        z-index: -1
+        background: transparent
+      .poster
+        position: fixed
+        min-width: 100%
+        min-height: 100%
+        width: auto
+        height: auto
+        background:
+          image: url('../assets/video/Ideas_2.jpg')
+          position: center
+          attachment: fixed
+          repeat: no-repeat
+          size: cover
+        z-index: -3
     .hero-text
       transition: all .15s ease
       @include medium-screens

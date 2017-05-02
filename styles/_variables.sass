@@ -7,6 +7,10 @@
   @media only screen and (max-width: 376px)
     @content
 
+@mixin mobile-screens()
+  @media only screen and (max-width: 414px)
+    @content
+
 @mixin top-bottom-padding
   padding-top: $padding-top
   padding-bottom: $padding-bottom
