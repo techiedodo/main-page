@@ -1,4 +1,30 @@
 $(document).ready(function(){
+// Validator
+$(function() {
+  $('#contact-form').validator();
+  $('#contact-form').on('submit', function(e) {
+    if (!e.isDefaultPrevented()) {
+      var url = "email.php";
+      $.ajax({
+          type: "POST",
+          url: url,
+          data: $(this).serialize(),
+          success: function(data) {
+              var messageAlert = 'alert-' + data.type;
+              var messageText = data.message;
+
+              var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+              if (messageAlert && messageText) {
+                  $('#contact-form').find('.messages').html(alertBox);
+                  $('#contact-form')[0].reset();
+              }
+          }
+      });
+      return false;
+    }
+  })
+});
+
 // Makes the height of the col equal to eachother
   function checkSize(){
     var bigger = $('#bigger').height();
@@ -36,7 +62,21 @@ $(document).ready(function(){
   var $lastPosition = 0;
   $(window).scroll(function(){
     // disappearing nav
-    if($(window).width() > 768) {
+    // if($(window).width() > 769) {
+    //   $position = $(window).scrollTop();
+    //   if ($position > $lastPosition) {
+    //     $("nav").fadeOut();
+    //   } else if ($lastPosition - $position > 5) {
+    //     $("nav").fadeIn();
+    //   }
+    //   $lastPosition = $position;
+    // }
+
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    if (!isMobile()) {
       $position = $(window).scrollTop();
       if ($position > $lastPosition) {
         $("nav").fadeOut();
@@ -44,6 +84,7 @@ $(document).ready(function(){
         $("nav").fadeIn();
       }
       $lastPosition = $position;
+      $('.collapse').css('display', 'none !important');
     }
 
     // scrolling features
