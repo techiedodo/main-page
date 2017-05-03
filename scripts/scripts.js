@@ -62,7 +62,21 @@ $(function() {
   var $lastPosition = 0;
   $(window).scroll(function(){
     // disappearing nav
-    if($(window).width() > 768) {
+    // if($(window).width() > 769) {
+    //   $position = $(window).scrollTop();
+    //   if ($position > $lastPosition) {
+    //     $("nav").fadeOut();
+    //   } else if ($lastPosition - $position > 5) {
+    //     $("nav").fadeIn();
+    //   }
+    //   $lastPosition = $position;
+    // }
+
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    if (!isMobile()) {
       $position = $(window).scrollTop();
       if ($position > $lastPosition) {
         $("nav").fadeOut();
@@ -70,6 +84,7 @@ $(function() {
         $("nav").fadeIn();
       }
       $lastPosition = $position;
+      $('.collapse').css('display', 'none !important');
     }
 
     // scrolling features
