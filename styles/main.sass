@@ -58,14 +58,15 @@ body
     #nav-section
       margin-top: 1.5em
       transition: all .35s ease
+      @media only screen and (max-width: 768px)
+        img
+          display: none
       .active a
         color: white !important
         transform: scale(1.2)
         background-color: transparent
         border-bottom: 1px solid white
       @include small-screens
-        img
-          display: none
         button
           padding: 5px 5px
           margin-top: 11px
@@ -76,9 +77,8 @@ body
           span
             font-size: 2.5em
           img
-            // transform: scale(.9)
-            // transition: all .35s ease
-            display: none
+            transform: scale(.9)
+            transition: all .35s ease
         .navbar-nav
           margin-top: 0
           position: relative
