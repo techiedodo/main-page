@@ -122,13 +122,20 @@ body
         min-height: 100%
         width: auto
         height: auto
+        z-index: -3
         background:
           image: url('../assets/video/Ideas_2.jpg')
           position: center
           attachment: fixed
           repeat: no-repeat
           size: cover
-        z-index: -3
+        @include small-screens
+          background:
+            image: url('../assets/video/Ideas_2_small.jpg')
+            position: center
+            attachment: fixed
+            repeat: no-repeat
+            size: cover
     .hero-text
       transition: all .15s ease
       @include medium-screens
@@ -288,6 +295,9 @@ body
     filter: FlipH
     position: relative
     left: 85%
+  @include small-screens
+    .g-recaptcha
+      transform: scale(.75)
 footer
   position: fixed
   width: 100%
