@@ -49,7 +49,7 @@ html(lang="en")
         .homepage-hero-module
           .video-container
             .filter
-            video.fillWidth(autoplay='', loop='' poster='./assets/video/Ideas.jpg')
+            video.fillWidth(autoplay='', loop='' poster='./assets/video/Ideas_2.jpg')
               source(src='./assets/video/Ideas_2.mp4', type='video/mp4')
               | Your browser does not support the video tag. I suggest you upgrade your browser.
               source(src='./assets/video/Ideas_2.webm', type='video/webm')
@@ -60,11 +60,6 @@ html(lang="en")
               | We Focus on Working with Small Businesses to Create & Build Digital Products.
               hr
               small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
-            //- .col-xs-12.col-sm-8
-            //-   h1 
-            //-     | We Focus on Working with Small Businesses to Create & Build Digital Products.
-            //-     hr
-            //-     small Learn From The Dodo. Be Adaptable. We Can Show You How. Let's Talk.
     .main
       a(name='services' id='services') 
       .wrapper-main
@@ -95,7 +90,8 @@ html(lang="en")
               | Your website shouldn't be an expense.
               br 
               | Let us turn it into a revenue-driving asset. 
-            button.btn.btn-primary(type='button' data-toggle='modal' data-target='.form-modal-sm') Upgrade your site Today.
+            //- button.btn.btn-primary(type='button' data-toggle='modal' data-target='.form-modal-sm') Upgrade your site Today.
+            a.btn.btn-primary(href='#contact' type='button' ) Upgrade your site Today.
     .secondary 
       .row.container-fluid
         .col-sm-6.secondary-left.row
@@ -211,25 +207,25 @@ html(lang="en")
           .col-sm-6.text-right 
             h5 Adapt & Fly Copyright &mdash; 2017 
   
-  .modal.fade.form-modal-sm(tabindex='-1' role='dialog' labelledby='mySmallModalLabel')
-    .modal-dialog.modal-sm(role='document')
-      .modal-content
-        .modal-header
-          button.close(type='button' data-dismiss='modal' aria-label='Close')
-            span(aria-hidden='true')&times;
-          h4 Let's Fly Together!
-        .modal-body
-          form(method='post' action='email.php' role='form')
-            .form-group
-              label(for='email') E-Mail
-              input(type='email' class='form-control' id='email' placeholder='Please enter Email' required)
-            .form-group
-              label(for='name') Name
-              input(type='text' class='form-control' id='name' placeholder='Please enter Name' required)
-            .form-group
-              label(for='message') Message
-              textarea(class='form-control' id='message' placeholder='Please enter Message' rows='5' required)
-            button(type='submit' class='btn btn-success btn-sm' name='submit' id='submit') Send Message
+  //- .modal.fade.form-modal-sm(tabindex='-1' role='dialog' labelledby='mySmallModalLabel')
+  //-   .modal-dialog.modal-sm(role='document')
+  //-     .modal-content
+  //-       .modal-header
+  //-         button.close(type='button' data-dismiss='modal' aria-label='Close')
+  //-           span(aria-hidden='true')&times;
+  //-         h4 Let's Fly Together!
+  //-       .modal-body
+  //-         form(method='post' action='email.php' role='form')
+  //-           .form-group
+  //-             label(for='email') E-Mail
+  //-             input(type='email' class='form-control' id='email' placeholder='Please enter Email' required)
+  //-           .form-group
+  //-             label(for='name') Name
+  //-             input(type='text' class='form-control' id='name' placeholder='Please enter Name' required)
+  //-           .form-group
+  //-             label(for='message') Message
+  //-             textarea(class='form-control' id='message' placeholder='Please enter Message' rows='5' required)
+  //-           button(type='submit' class='btn btn-success btn-sm' name='submit' id='submit') Send Message
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
   script(src="./scripts/validator.js")
